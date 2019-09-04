@@ -39,4 +39,8 @@ server.use(session(sessionOptions));
 server.use('/api/auth', authRouter);
 server.use('/api/jokes', authenticate, jokesRouter);
 
+server.get('/', (req, res) => {
+  res.send('We out here!');
+});
+
 module.exports = server;
